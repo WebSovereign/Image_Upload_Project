@@ -19,8 +19,10 @@ app.set('view engine', 'ejs');
 // Mongo URI
 const mongoURI = 'mongodb+srv://admin-isaak:Bi0jgrmom9inuyZF@cluster0.y0hyp.mongodb.net/testDB?retryWrites=true&w=majority';
 
+// mongoose.connect("mongodb+srv://admin-isaak:Bi0jgrmom9inuyZF@cluster0.y0hyp.mongodb.net/todolistDB?retryWrites=true&w=majority", {useNewUrlParser: true});
+
 // Create mongo connection
-const conn = mongoose.createConnection(mongoURI);
+const conn = mongoose.createConnection(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // Init gfs
 let gfs;
